@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Domi</title>
+    <link rel="stylesheet" href="style.css">  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+    <h1>Mi Domi</h1>
+    <form>
+        <label for="todos_piden">¿Todos van a pedir lo mismo?</label>
+        <input type="radio" name="todos_piden" id="todos_igual_si" value="si" checked> Si
+        <input type="radio" name="todos_piden" id="todos_igual_no" value="no"> No
+    
+        <label for="num_personas">Número de personas que van a pedir:</label>
+        <input type="number" name="num_personas" id="num_personas" required>
+
+        <label for="producto_persona" class="mostrar_productos">Producto:</label>
+            <select id="producto_persona" name="producto_persona" disabled>
+                <option value=""></option>
+                <option value="pizza">Pizza</option>
+                <option value="hamburguesa">Hamburguesa</option>
+                <option value="perro">Perro</option>
+                <option value="sandwich">Sandwich</option>
+            </select>
+            
+
+        <button id="submit_button">Crear Tabla</button>
+    </form>
+    
+    <table id="tabla">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Qué va a pedir</th>
+                <th>Incluir bebida SI - NO</th>
+                <th>Valor bebida</th>
+                <th>Valor por persona</th>
+                <th>Opc</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+    <button id="btn-agregar-persona" hidden>Agregar Persona</button>
+    
+    <div id="total"></div>
+    
+    <button id="calcular" hidden>Calcular</button>
+
+    <button id="add_person" hidden>Añadir Persona</button>
+
+    <button id="enviar_pedido" hidden>Enviar pedido</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
