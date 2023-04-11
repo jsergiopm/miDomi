@@ -32,7 +32,8 @@ input[type="radio"] {
 }
 
 #submit_button,
-#btn-agregar-persona
+#btn-agregar-persona,
+#btn-calcular-total
 {
     display: block;
     margin: 0 auto;
@@ -43,21 +44,12 @@ input[type="radio"] {
     border-radius: 5px;
     cursor: pointer;
 }
-#btn-agregar-persona
-{   
-    display: block;
 
-}
 
-#calcular
+#btn-calcular-total
 {
-    margin: 0 auto;
-    padding: 10px 20px;
-    background-color: #1abc9c;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+    margin-top: 10px;
+    background-color: cornflowerblue;
 }
 
 #enviar_pedido

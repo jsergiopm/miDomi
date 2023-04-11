@@ -39,7 +39,7 @@ _$(function(){
                 ' <option value="si">Si</option>'+
                 ' <option value="no">No</option></select>',
                 "valor_bebida": 4000,
-                "valor_por_persona": 0
+                "valor_por_persona": 14000
             };
             if (selectionRadio === "si"){
                 registro.producto = _$("#producto_persona").val();
@@ -63,6 +63,7 @@ _$(function(){
         }
         e.preventDefault();
         _$("#btn-agregar-persona").show();
+        _$("#btn-calcular-total").show();
     });
 
     _$("#btn-agregar-persona").click(function(){
@@ -119,5 +120,23 @@ _$(function(){
         event.preventDefault();
         _$(this).closest('tr').remove();
     });
+
+
+    _$("#btn-calcular-total").click(function(){
+        _$('#tabla').append('<tr><td colspan="4">Total:</td><td id="total"></td></tr>');
+        // Calcula la suma de los valores en las celdas
+        var total = 0;
+        _$('#tabla td.total_persona').each(function() {
+            var valor = parseInt(_$(this).text());
+            console.log(valor);
+            if (!isNaN(valor)) {
+                total += valor; 
+            }
+        });
+
+        // Actualiza la celda de total con el valor calculado
+        _$('#total').text(total);
+    });
+
 
 });
